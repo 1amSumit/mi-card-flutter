@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,11 +13,11 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
           child: Column(
             children: [
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage('images/avatar.jpg'),
               ),
-              Text(
+              const Text(
                 'Simran Bhanushali',
                 style: TextStyle(
                     fontFamily: 'Pacifico',
@@ -37,45 +35,35 @@ class MyApp extends StatelessWidget {
                     letterSpacing: 3.0,
                     wordSpacing: 3.0),
               ),
-              Container(
+              Card(
                 color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: [
-                    Icon(Icons.phone, color: Colors.teal),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      "+917865432108",
-                      style: TextStyle(
-                          color: Colors.teal.shade900,
-                          fontFamily: 'Source Sans pro',
-                          fontSize: 20),
-                    )
-                  ],
+                margin:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: const Icon(Icons.phone, color: Colors.teal),
+                  title: Text(
+                    "+917865432108",
+                    style: TextStyle(
+                        color: Colors.teal.shade900,
+                        fontFamily: 'Source Sans pro',
+                        fontSize: 20),
+                  ),
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: [
-                    Icon(Icons.email, color: Colors.teal),
-                    SizedBox(
-                      width: 10,
+                margin:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: const Icon(Icons.email, color: Colors.teal),
+                  title: Text(
+                    "gmail@gmail.com",
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20,
                     ),
-                    Text(
-                      "gmail@gmail.com",
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'Source Sans Pro',
-                        fontSize: 20,
-                      ),
-                    )
-                  ],
+                  ),
                 ),
               ),
             ],
